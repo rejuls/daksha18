@@ -182,7 +182,7 @@ nav {
   width: 100%;
   background-color: #3330;
   color: #eee;
-  position: fixed;
+  position: relative;
 }
 nav ul {
   padding: 0;
@@ -227,6 +227,7 @@ nav a#openup {
 
   #showcase h2 {
     font-size: 1.5rem;
+
   }
 
   nav {
@@ -268,7 +269,7 @@ nav a#openup {
   }
   nav a#openup {
     display: block;
-    background-color: #333;
+    background-color: #3330;
     width: 100%;
     position: relative;
   }
@@ -286,7 +287,12 @@ nav a#openup {
 .cf {
   zoom: 1;
 }
-
+.section-main h2
+{
+  border:1px solid white;
+  width:25%;
+  display: inline;
+}
 @media screen and (max-width: 780px) {
   .gift-cards {
     grid-template-columns: 1fr;
