@@ -10,34 +10,36 @@
   <link rel="stylesheet" href="css/flipclock.css">
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script src="js/flipclock.js"></script>
+  <script src="js/jquery.countdown.js"></script>
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
   <link rel="stylesheet" href="css/style.css">
   <title>Welcome to DAKSHA </title>
+  <link rel = "icon" type = "image/jpg" href = "/bg2.jpg">
 </head>
 
 <body>
 
   <!-- Showcase & Nav -->
          <header>
-    <nav class="navbar navbar-expand-md class="navbar navbar-light" style=" background: linear-gradient(to right, #ad5389, #3c1053);>
+    <nav class="navbar navbar-expand-md navbar navbar-dark bg-dark navbar sticky-top">
     <div class="container-fluid">
-  <span class="navbar-brand mb-0 h1" id="heading">DAKSHA'18</span>
+  <span class="navbar-brand mb-0 h1" id="heading">Daksha</span>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-    <span class="navbar-toggler-icon"><img src="css/pp.jpg"></span>
+    <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse borderXwidth" id="navbarResponsive">
+  <div class="collapse navbar-collapse" id="navbarResponsive">
     <ul class="navbar-nav ml-auto">
-      <!--  <li class="nav-item active">
+        <li class="nav-item active">
       <a class="nav-link" href="#">Results</a>
       </li>
       <li class="nav-item">
       <a class="nav-link" href="#">Rank Board</a>
-    </li> -->
-      <li class="nav-item">
-      <a class="nav-link" href="https://docs.google.com/forms/d/16yuPACdv8nk_3y2tC0SjVujiT8f4WFR5atnC5tcDKzg/">Registration</a>
       </li>
       <li class="nav-item">
-      <a class="nav-link" href="#Event lists">Event Lists</a>
+      <a class="nav-link" href="#registration">Registration</a>
+      </li>
+      <li class="nav-item">
+      <a class="nav-link" href="#contact_us">Event Lists</a>
       </li>
   </ul>
     </div>
@@ -45,59 +47,52 @@
 </nav>
 </header>
  <div id="showcase">
-
+    
     <div class="section-main container">
       <h1>DAKSHA 2K18</h1>
-      <br>
-
-      <h2>14,15,21,22 NOV</h2>
+      <h2>21,22 NOV</h2>
     </div>
-  </div>
     </div>
 
-  <!-- Music Section -->
+ 
   <section id="music" class="section">
     <div class="container">
-
       <h2 class="section-head">
-        Onstage Registration Starts On Friday
+       Registration Starts In
       </h2>
-
+      <div class="count_container"> <div class="clock" style="margin:2em;"></div></div>
+      <div class="counter"></div>
+    </div>
   </section>
 
-  <!-- Video Section -->
+  <div class="container-fluid padding">
+	<div class="row text-center padding">
+		<div class="col-12">
+			<h2>Connect</h2>
+		</div>
+		<div class="col-12 social padding">
+			<a href="#"><i class="fab fa-facebook"></i></a>
+			<a href="#"><i class="fab fa-instagram"></i></a>
+		</div>
+	</div>
+</div>
+
 
 
   <!-- Footer -->
   <footer>
-    <div class="container">
-      <div class="footer-cols">
-      <!--  <ul>
-          <li>Facebook</li>
-          <li>
-            <a href="#">aaaaa</a>
-          </li>
-        </ul>
-
-        <ul>
-          <li>Instagram</li>
-          <li>
-            <a href="#">aaaaa</a>
-          </li>
-        </ul> -->
-      
+    
       </div>
     </div>
     <div class="footer-bottom text-center">
-      Made With at &#128156; GEC Palakkad <br> ./tech_team
+      Copyright &copy; 2018 Daksha
     </div>
   </footer>
   <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
-<!--  <script type="text/javascript">
-		var clock;
+  <script type="text/javascript">
 
 		$(document).ready(function() {
 			var clock;
@@ -106,7 +101,7 @@
       var event=new Date(2018,10,21).getTime();
      // var e=e.getTime();
       var a=event-now;
-
+      
 			clock = $('.clock').FlipClock({
 		        clockFace: 'DailyCounter',
 		        autoStart: false,
@@ -119,10 +114,20 @@
 
 		    clock.setTime(a/1000);
 		    clock.setCountdown(true);
-		    clock.start();
+        clock.start();
+        
+        $('.counter').countdown('2018/11/21', function(event) {
+        $(this).html(event.strftime('%w weeks %d days %H:%M:%S'));
 
-		});
-	</script> -->
+
+
+
+
+    
+
+    });
+  });
+	</script>
 </body>
 
 </html>

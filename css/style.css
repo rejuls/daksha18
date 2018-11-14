@@ -2,7 +2,7 @@
 
 /* CSS Variables */
 :root {
-  background: linear-gradient(to right, #ad5389, #3c1053);
+  --primary-color: #b90415;
   --primary-color-hover: #d3071b;
   --secondary-color: #103063;
   --secondary-color-hover: #143f85;
@@ -11,34 +11,6 @@
 .container
 {
   width: 100%;
-}
-div.borderXwidth a:before, div.borderXwidth a:after
-{
-    position: absolute;
-    opacity: 0;
-    width: 0%;
-    height: 2px;
-    content: '';
-    background: #FFF;
-    transition: all 0.3s;
-}
-
-div.borderXwidth a:before
-{
-    left: 0px;
-    top: 0px;
-}
-
-div.borderXwidth a:after
-{
-    right: 0px;
-    bottom: 0px;
-}
-
-div.borderXwidth a:hover:before, div.borderXwidth a:hover:after
-{
-    opacity: 1;
-    width: 100%;
 }
 
 body {
@@ -60,8 +32,11 @@ a {
 
 /* Section */
 .section {
-  display: block;
+  display: flex;
   padding: 2rem 0;
+  justify-content: center;
+  align-content: center;
+  margin: auto;
 }
 
 .section-head {
@@ -211,16 +186,7 @@ nav {
   position: absolute;
   z-index: 3;
 }
-nav ul {
-  padding: 0;
-  margin: 0;
 }
-nav li {
-  display: inline;
-  float: left;
-
-}
-
 nav a {
   display: inline-block;
   width: 100px;
@@ -230,28 +196,11 @@ nav a {
   color: #eee;
   text-decoration: none;
 }
-.navbar-light .navbar-toggler-icon {
-  background-image: url("css/pp.jpg");
-}
-nav li:hover {
-  background-color: #eaafc8;
-}
 nav a#openup {
   display: none;
 }
 
-
-
 @media screen and (max-width: 580px) {
-   .navbar-toggler-icon {
-  align-content: right;
-  font-size: 100%;
-  padding-right: 2px;
-  padding-left: 2px
-  padding-top: 2px;
-  padding-bottom: 2px;
-  background-color: #e9e4f0;
- }
   .hide-on-small {
     display: none;
   }
@@ -309,11 +258,10 @@ nav a#openup {
     position: absolute;
     right: 5px;
     top: 20px;
-    color: #e9e4f0;
   }
   nav a#openup {
     display: block;
-    background-color: #e9e4f0;
+    background-color: #3330;
     width: 100%;
     position: relative;
   }
@@ -369,10 +317,32 @@ nav a#openup {
   width: 75%;
   text-align: center;
 
+
 }
+.counter{
+  display: none;
+}
+/*connect*/
+.fa-facebook {
+  color: #3b5998;
+}
+.fa-instagram {
+  color: #e4405f;
+}
+.fa-facebook:hover,
+.fa-instagram:hover,
+ {
+  color: #d5d5d5;
+}
+
 @media screen and (max-width: 780px) {
   .gift-cards {
     grid-template-columns: 1fr;
+  }
+  .social a {
+    font-size: 4em;
+    padding: 2rem;
+  }
   }
 
   footer .footer-cols {
@@ -384,4 +354,17 @@ nav a#openup {
   #showcase p.lead {
     display: none;
   }
+}
+@media only screen and (max-width: 600px)
+{
+  .counter{
+    display: inline;
+  }
+  .count_container
+  {
+    display: none;
+  }
+footer .container
+{
+display:none;
 }
