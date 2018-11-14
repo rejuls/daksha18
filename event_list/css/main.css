@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: OpenSans-Regular;
-  src: url('../fonts/OpenSans/OpenSans-Regular.ttf'); 
+  src: url('../fonts/OpenSans/OpenSans-Regular.ttf');
 }
 
 
@@ -14,8 +14,8 @@
 /*//////////////////////////////////////////////////////////////////
 [ RESTYLE TAG ]*/
 * {
-  margin: 0px; 
-  padding: 0px; 
+  margin: 0px;
+  padding: 0px;
   box-sizing: border-box;
 }
 
@@ -112,8 +112,8 @@ iframe {
 #event_list{
   text-align: center;
   color:#ffffff;
-  font-family:'Rajdhani',sans-serif; 
-  
+  font-family:'Rajdhani',sans-serif;
+
 }
 .limiter {
   width: 100%;
@@ -278,7 +278,10 @@ tbody tr:hover {
     content: "Event";
   }
   table tbody tr td:nth-child(2):before {
-    content: "Date";
+    content: "Time (in minutes)";
+  }
+  table tbody tr td:nth-child(3):before {
+    content: "Number Of Participants";
   }
   /*table tbody tr td:nth-child(3):before {
     content: "Name";
@@ -313,7 +316,7 @@ tbody tr:hover {
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 700px) {
   .container-table100 {
     padding-left: 15px;
     padding-right: 15px;
