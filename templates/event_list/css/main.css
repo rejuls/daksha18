@@ -278,7 +278,7 @@ tbody tr:hover {
     content: "Event";
   }
   table tbody tr td:nth-child(2):before {
-    content: "Time (in minutes)";
+    content: "Time";
   }
   table tbody tr td:nth-child(3):before {
     content: "Number Of Participants";

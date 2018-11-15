@@ -305,15 +305,15 @@ nav a#openup {
   margin: auto;
 
   display: flex;
-  
+
   position: relative;
-  
+
   justify-content: center;
-  
+
   align-content: center;
-  
+
   align-items: center;
-  
+
   width: 75%;
   text-align: center;
 
@@ -367,4 +367,4 @@ nav a#openup {
 footer .container
 {
 display:none;
-}
+})
