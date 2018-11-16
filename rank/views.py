@@ -1,9 +1,8 @@
 from django.shortcuts import render
 from . models import Point,Result, Registration
 from . forms import RegistrationForm
-import xlwt
+import csv
 from django.http import HttpResponse
-
 
 # Create your views here
 
@@ -42,46 +41,16 @@ def result_view(request, name):
 	
 	return render(request,"result_view.html",context)
 
+def export_users_csv(request):
+    response = HttpResponse(content_type='text/csv')
+    response['Content-Disposition'] = 'attachment; filename="users.csv"'
 
+    writer = csv.writer(response)
+    writer.writerow(['full_name', 'year', 'department', 'phone', 'events'])
 
-def download_excel_data(request):
-	# content-type of response
-	response = HttpResponse(content_type='application/ms-excel')
+    lists = Registration.objects.all().values_list('full_name', 'year', 'department', 'phone', 'events')
+    for entry in lists:
+        writer.writerow(entry)
 
-	#decide file name
-	response['Content-Disposition'] = 'attachment; filename="ThePythonDjango.xls"'
+    return response
 
-	#creating workbook
-	wb = xlwt.Workbook(encoding='utf-8')
-
-	#adding sheet
-	ws = wb.add_sheet("sheet1")
-
-	# Sheet header, first row
-	row_num = 0
-
-	font_style = xlwt.XFStyle()
-	# headers are bold
-	font_style.font.bold = True
-
-	#column header names, you can use your own headers here
-	columns = ['Name', 'Year', 'Department', 'Phone', 'Events' ]
-
-	#write column headers in sheet
-	for col_num in range(len(columns)):
-		ws.write(row_num, col_num, columns[col_num], font_style)
-
-	# Sheet body, remaining rows
-	font_style = xlwt.XFStyle()
-
-	#get your data, from database or from a text file...
-	data = get_data() #dummy method to fetch data.
-	for my_row in data:
-		row_num = row_num + 1
-		ws.write(row_num, 0, my_row.name, font_style)
-		ws.write(row_num, 1, my_row.start_date_time, font_style)
-		ws.write(row_num, 2, my_row.end_date_time, font_style)
-		ws.write(row_num, 3, my_row.notes, font_style)
-
-	wb.save(response)
-	return response
