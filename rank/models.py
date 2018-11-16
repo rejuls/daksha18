@@ -43,7 +43,7 @@ class Registration(models.Model):
 		return self.fullname
 
 	def __unicode__(self):
-		return self.fullname
+		return self.full_name
 
 class Result(models.Model):
 
