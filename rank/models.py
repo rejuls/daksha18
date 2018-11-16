@@ -40,7 +40,7 @@ class Registration(models.Model):
 	events = MultiSelectField(choices=EVENTS_CHOICES, max_choices=4, default='KADHAPRASANGAM')
 	
 	def __str__(self):
-		return self.full_name
+		return self.fullname
 
 	def __unicode__(self):
 		return self.full_name
