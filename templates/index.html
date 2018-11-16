@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+{% load static %}
+
+
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -7,13 +10,12 @@
   <link href="https://fonts.googleapis.com/css?family=Rajdhani" rel="stylesheet">
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="css/flipclock.css">
+  <link rel="stylesheet" href="{% static 'css/flipclock.css'%}">
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script src="js/flipclock.js"></script>
-  <script src="js/jquery.countdown.js"></script>
+  <script src="{% static 'js/flipclock.js'%}"></script>
+  <script src="{% static 'js/jquery.countdown.js'%}"></script>
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-  {% load staticfiles %}
-  <link rel="stylesheet" href="{% static 'css/style.css?v=2' %}" type='text/csss'>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" type='text/css'>
   <title> DAKSHA'18 |YAGA OF ART </title>
   <link rel = "icon" type = "image/jpg" href = "/bg2.jpg">
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -22,7 +24,6 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'UA-129276229-1');
 </script>
 
@@ -45,12 +46,12 @@
       </li>
       <li class="nav-item">
       <a class="nav-link" href="#">Rank Board</a>
-      </li>
+      </li>-->
       <li class="nav-item">
-      <a class="nav-link" href="#registration">Registration</a>
-    </li> -->
+      <a class="nav-link" href="register">Registration</a>
+    </li>
       <li class="nav-item">
-      <a class="nav-link" href="./event_list/events.html">Event Lists</a>
+      <a class="nav-link" href="events">Event Lists</a>
       </li>
   </ul>
     </div>
@@ -63,8 +64,7 @@
       <h1>DAKSHA 2K18</h1>
       <h2>21,22 NOV</h2>
       <br>
-     <br>
-      <a href="Registration form/event-registration.html"><button type="button" class="btn btn-outline-light btn-lg">REGISTER NOW</button></a>
+      <a href="/register"><button type="button" class="btn btn-outline-light btn-lg">REGISTER NOW</button></a>
     </div>
     </div>
 
@@ -75,7 +75,7 @@
        The Yaga Of Art Starts In
       </h2>
       <div class="count_container"> <div class="clock" style="margin:2em;"></div></div>
-      <div class="counter"></div><img src="./img/line.png">
+      <div class="counter"></div><img src={%static './img/line.png'%}>
 
     </div>
   </section>
@@ -97,7 +97,7 @@
   <!-- Footer -->
   <footer>
     <div class="footer-bottom text-center">
-      Made With <img src="./img/purple-heart_1f49c.png" style="height:25px;width:25px"> at GEC Palakkad <br> ./tech_team
+      Made With <img src="{% static "./img/purple-heart_1f49c.png"%}" style="height:25px;width:25px"> at GEC Palakkad <br> ./tech_team
     </div>
   </footer>
   <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->

@@ -16,13 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.conf.urls import url
 from rank.views import score_view,result_view
-from .views import index,register_page
+from .views import index,register_page,event
 from django.contrib import admin
 
 
 urlpatterns = [
      url(r'^admin/', admin.site.urls),
     url(r'^$',index,name="IndexPage"),
-    url(r'^register/$',register_page,name="RegisterPage"),
+    url(r'^events$',event,name="EventPage"),
+    url(r'^register$',register_page,name="RegisterPage"),
     url(r'^score/$',score_view,name="Score")
 ]
