@@ -14,16 +14,9 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.conf.urls import url
-from rank.views import score_view,result_view
-from .views import index,register_page,event
-from django.contrib import admin
-
+from django.urls import path, include
 
 urlpatterns = [
-     url(r'^admin/', admin.site.urls),
-    url(r'^$',index,name="IndexPage"),
-    url(r'^events$',event,name="EventPage"),
-    url(r'^register$',register_page,name="RegisterPage"),
-    url(r'^score/$',score_view,name="Score")
+    path('admin/', admin.site.urls),
+    path('', include(('rank.urls', 'rank'), namespace='rank')),
 ]
