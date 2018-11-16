@@ -82,7 +82,7 @@
 		</form>-->
                 <div class="card-body">
                    <form method="POST">
-
+                    {% csrf_token %}
 
                         <div class="form-row">
                             <div class="name">Name</div>
@@ -116,6 +116,11 @@
                                 </div>
                             </div>
                         </div>
+                        
+  
+    <div class="input-group-text">
+      {{ form.events }}
+    </div>
                         <!--<div class="form-row">
                             <div class="name">YEAR</div>
                             <div class="value">
