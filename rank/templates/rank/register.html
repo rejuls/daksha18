@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 {% load static %}
 {% load crispy_forms_tags %}
+{% load filters %}
 
 <html lang="en">
 
@@ -74,24 +75,48 @@
                     <h2 class="title">Event Registration Form</h2>
                 </div>
 
-                  <form method="POST" class="form-control">{% csrf_token %}
+                 <!-- <form method="POST" class="form-control">{% csrf_token %}
                     <table border="0">
 	{{form|crispy}}</table>
 			<button class="green" type="submit">Register</button>
-		</form>
+		</form>-->
                 <div class="card-body">
-                <!--   <form method="POST">
+                   <form method="POST">
 
 
                         <div class="form-row">
                             <div class="name">Name</div>
                             <div class="value">
                                 <div class="input-group">
-                                    <input class="input--style-5" type="text" name="name">
+                                    {{ form.full_name|addclass:'input--style-5' }}
                                 </div>
                             </div>
                         </div>
-                        <div class="form-row">
+                         <div class="form-row">
+                            <div class="name">Year</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    {{ form.year|addclass:'input--style-5' }}
+                                </div>
+                            </div>
+                        </div>
+                         <div class="form-row">
+                            <div class="name">Department</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    {{ form.department|addclass:'input--style-5' }}
+                                </div>
+                            </div>
+                        </div>
+                         <div class="form-row">
+                            <div class="name">Phone Number</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    {{ form.phone|addclass:'input--style-5' }}
+                                </div>
+                            </div>
+                        </div>
+                        <!--<div class="form-row">
                             <div class="name">YEAR</div>
                             <div class="value">
                                 <div class="input-group">
@@ -146,7 +171,7 @@
                                     <input class="input--style-5" type="text" name="phone">
                                 </div>
                             </div>
-                        </div>
+                        </div>-->
 
 
 
