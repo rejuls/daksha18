@@ -7,4 +7,4 @@ class RegistrationForm(ModelForm):
 		fields = ['full_name','year','department','phone','events']
 		def __init__(self, *args, **kwargs):
 			super(SampleClass, self).__init__(*args, **kwargs)
-			self.fields['name'].widget.attrs['class'] = 'my_class'
+			self.fields['name'].widget.attrs['class'] = 'input--style-5'
