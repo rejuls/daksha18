@@ -350,9 +350,15 @@ nav a#openup {
   }
 }
 
-@media screen and (max-height: 580px) {
+@media screen and (max-height: 576px) {
   #showcase p.lead {
     display: none;
+  }
+  #showcase.btn{
+    font-size: 80%;
+  padding: 4px 8px;
+  top: 50%;
+
   }
 }
 @media only screen and (max-width: 600px)
