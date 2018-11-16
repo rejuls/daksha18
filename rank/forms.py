@@ -5,3 +5,6 @@ class RegistrationForm(ModelForm):
 	class Meta:
 		model = Registration
 		fields = ['full_name','year','department','phone','events']
+		def __init__(self, *args, **kwargs):
+			super(SampleClass, self).__init__(*args, **kwargs)
+			self.fields['name'].widget.attrs['class'] = 'my_class'
