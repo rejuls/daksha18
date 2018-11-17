@@ -22,13 +22,15 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '@117&l1tptqxmr71j=2(iy80tpzpi*gk0orw1t!_q8+ck2^q^m'
+SECRET_KEY = env('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env('DEBUG') # False if not in os.environ
 TEMPLATE_DEBUG = DEBUG
 
 ALLOWED_HOSTS = []
-
+DATABASES = {
+    'default': env.db(), # Raises ImproperlyConfigured exception if DATABASE_URL not in os.environ
+    }
 
 
 # Application definition
@@ -51,7 +53,6 @@ MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -81,16 +82,12 @@ WSGI_APPLICATION = 'daksha.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'daksha',
-        'USER':'postgres',
-        'PASSWORD':'POSTGRES100',
-        'HOST':'localhost',
-        'PORT':'',
-    }
-}
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#    }
+#}
 
 
 
