@@ -12,7 +12,8 @@ def index(request):
 def event(request):
 		return render(request, 'events.html')
 
-
+def team(request):
+		return render(request, 'team.html')
 
 def register_page(request):
 	if request.method == 'POST':
@@ -26,10 +27,10 @@ def register_page(request):
 
 
 def score_view(request):
-	
+
 	queryset = Point.objects.all()
 	context = {"score" : queryset }
-	
+
 	return render(request,"score.html",context)
 
 
@@ -38,7 +39,7 @@ def result_view(request, name):
 
 	queryset = Result.objects.all()
 	context = {"result" : queryset }
-	
+
 	return render(request,"result_view.html",context)
 
 def export_users_csv(request):
@@ -53,4 +54,3 @@ def export_users_csv(request):
         writer.writerow(entry)
 
     return response
-

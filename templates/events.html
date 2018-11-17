@@ -50,23 +50,24 @@
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-              <!--      <li class="nav-item active">
-                  <a class="nav-link" href="#">Results</a>
-                  </li>
-                  <li class="nav-item">
-                  <a class="nav-link" href="#">Rank Board</a>
-                  </li>-->
-                  <li class="nav-item">
-                  <a class="nav-link" href="{% url "rank:index" %}">Home</a>
+
+							<ul class="navbar-nav ml-auto">
+									<li class="nav-item active">
+							<!--  <a class="nav-link" href="#">Results</a>
+								</li>-->
+								<li class="nav-item">
+								<a class="nav-link" href="{% url "rank:index" %}">Home</a>
+							</li>
+								<li class="nav-item">
+								<a class="nav-link" href="{% url "rank:team" %}">Team</a>
 								</li>
 								<li class="nav-item">
 								<a class="nav-link" href="{% url "rank:register_page" %}">Registration</a>
+							</li>
+								<li class="nav-item">
+								<a class="nav-link" href="{% url "rank:event" %}">Event Lists</a>
 								</li>
-                  <li class="nav-item">
-                  <a class="nav-link" href="{% url "rank:event" %}">Event Lists</a>
-                  </li>
-              </ul>
+						</ul>
                 </div>
               </div>
             </nav>
@@ -79,7 +80,10 @@
 		1) Only one group per year allowed for group events.<br>
 		2) Year Representatives need to give team wise names for the group events.<br>
 		3)There will be a 30RS registration fee for group events.<br>
-		4) Maximum 3 Group items and 4 individual items per person.
+		4) Maximum 3 Group items and 4 individual items per person.<br>
+		5) Points for group events: 1st - 10, 2nd - 7, 3rd - 3<br>
+		6) Points for individual events: 1st - 5, 2nd - 3, 3rd - 1
+
 </p>
 
 	<div class="limiter">
