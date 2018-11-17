@@ -35,6 +35,27 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
   <link rel="stylesheet" href="{% static 'css/style.css'%}">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-129276229-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-129276229-1');
+</script>
+
+<style>
+
+ul.input--style-text {
+  list-style-type: none;
+  width: 100px;
+}
+label {
+    display: block;
+    margin-bottom: .5rem;
+}
+
+</style>
 </head>
 <body>
   <header>
@@ -67,12 +88,24 @@
 </nav>
 </header>
 
+
+
 <div class="event">
     <div class="page-wrapper bg-gra-03 p-t-45 p-b-50 ml-3 mr-3">
-        <div class="wrapper wrapper--w790">
+        <div class="wrapper wrapper--w790"><center>
+<h2 class="display-4" id="event_list">INDIVIDUAL OFFSTAGE EVENTS REGISTRATION
+</h2>
+          <h2 class="display-5" id="event_list"> General Rules:</h2>
+        <p class="display-5" id="event_list">
+          1) An individual can participate in upto 4 individual events<br>
+          2) The form will not be submitted if you select more than 4 and you cannot participate <br>
+          3) There will not be any on-the-spot registration <br>
+          4) For group events the year representative have to give the team details to any union member.<br>
+          5) This registration form will close on 20/11/18 10PM.<br>
+        </p></center>
             <div class="card card-5">
                 <div class="card-heading">
-                    <h2 class="title">Offsate Events Registration Form</h2>
+                    <h2 class="title">Individual Offstage Events Registration Form</h2>
                 </div>
 
                  <!-- <form method="POST" class="form-control">{% csrf_token %}
@@ -115,9 +148,11 @@
                                     {{ form.phone|addclass:'input--style-5' }}
                                 </div>
                             </div>
-                        </div>
- <div class="input-group-text">
-     {{ form.events }}
+                        </div>                         <div class="form-row">
+
+                        <div class="name">Select Upto 4 Events</div>
+</div><div class="input-group-text">
+     {{ form.events|addclass:'input--style-text' }}
     </div>
 
                         <!--<div class="form-row">
@@ -177,7 +212,7 @@
                             </div>
                         </div>-->
 
-
+<br>
 
                         <div>
                             <button class="btn btn--radius-2 btn--red" type="submit">Register</button>
