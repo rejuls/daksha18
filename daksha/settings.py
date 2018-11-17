@@ -27,7 +27,7 @@ SECRET_KEY = env('SECRET_KEY')
 DEBUG = env('DEBUG') # False if not in os.environ
 TEMPLATE_DEBUG = DEBUG
 
-ALLOWED_HOSTS = [damp-forest-38766.herokuapp.com]
+ALLOWED_HOSTS = ['damp-forest-38766.herokuapp.com',]
 DATABASES = {
     'default': env.db(), # Raises ImproperlyConfigured exception if DATABASE_URL not in os.environ
     }
