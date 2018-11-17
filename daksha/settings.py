@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 import os
 import environ
+import dj_database_url
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 root = environ.Path(__file__) - 2 # three folder back (/a/b/c/ - 3 = /)
@@ -77,18 +79,19 @@ WSGI_APPLICATION = 'daksha.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'daksha',
-        'USER':'postgres',
-        'PASSWORD':'POSTGRES100',
-        'HOST':'localhost',
-        'PORT':'',
-    }
-}
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#        'NAME': 'daksha',
+#        'USER':'postgres',
+#        'PASSWORD':'POSTGRES100',
+    #    'HOST':'localhost',
+    #    'PORT':'',
+    #}
+#}
 
-
+DATABASES = {}
+DATABASES['default'] = dj_database_url.parse(env('B_DATABASE_URL'), conn_max_age=600)
 
 
 # Password validation
