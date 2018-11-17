@@ -66,22 +66,22 @@ label {
 <span class="navbar-toggler-icon"></span>
 </button>
 <div class="collapse navbar-collapse" id="navbarResponsive">
-<ul class="navbar-nav ml-auto">
- <li class="nav-item active">
-<!--  <a class="nav-link" href="#">Results</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="#">Rank Board</a>
-</li>-->
-<li class="nav-item">
-<a class="nav-link" href="{% url "rank:index" %}">Home</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="{% url "rank:register_page" %}">Registration</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="{% url "rank:event" %}">Event Lists</a>
-</li>
+  <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+  <!--  <a class="nav-link" href="#">Results</a>
+    </li>-->
+    <li class="nav-item">
+    <a class="nav-link" href="{% url "rank:index" %}">Home</a>
+  </li>
+    <li class="nav-item">
+    <a class="nav-link" href="{% url "rank:team" %}">Team</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" href="{% url "rank:register_page" %}">Registration</a>
+  </li>
+    <li class="nav-item">
+    <a class="nav-link" href="{% url "rank:event" %}">Event Lists</a>
+    </li>
 </ul>
 </div>
 </div>
@@ -102,7 +102,9 @@ label {
           3) There will not be any on-the-spot registration <br>
           4) For group events the year representative have to give the team details to any union member.<br>
           5) This registration form will close on 19/11/18 10PM.<br>
-          6) PLease do not make multiple entries.<br>
+          6) Please do not make multiple entries.<br>
+          7) Points for group events: 1st - 10, 2nd - 7, 3rd - 3<br>
+          8) Points for individual events: 1st - 5, 2nd - 3, 3rd - 1
         </p></center>
             <div class="card card-5">
                 <div class="card-heading">

@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,9 +7,18 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Alumni Portal</title>
 	<link href="https://fonts.googleapis.com/css?family=Rajdhani" rel="stylesheet">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="an"nymous">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="{% static 'about/css/style.css'%}">
+
+
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-129276229-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	  gtag('config', 'UA-129276229-1');
+	</script>
 </head>
 <body>
 	<header>
@@ -19,18 +29,23 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarResponsive">
-    <ul class="navbar-nav ml-auto">
-      	<li class="nav-item active">
-      <a class="nav-link" href="#">Home</a>
-  		</li>
-      <li class="nav-item">
-      <a class="nav-link" href="#">Event lists</a>
-  		</li>
-      <li class="nav-item">
-      <a class="nav-link" href="#registration">Registration</a>
-  		</li>
-   		
-  </ul>
+		<ul class="navbar-nav ml-auto">
+				<li class="nav-item active">
+		<!--  <a class="nav-link" href="#">Results</a>
+			</li>-->
+			<li class="nav-item">
+			<a class="nav-link" href="{% url "rank:index" %}">Home</a>
+		</li>
+			<li class="nav-item">
+			<a class="nav-link" href="{% url "rank:team" %}">Team</a>
+			</li>
+			<li class="nav-item">
+			<a class="nav-link" href="{% url "rank:register_page" %}">Registration</a>
+		</li>
+			<li class="nav-item">
+			<a class="nav-link" href="{% url "rank:event" %}">Event Lists</a>
+			</li>
+	</ul>
   	</div>
   </div>
 </nav>
@@ -39,7 +54,7 @@
 <div class="container-fluid padding">
 	<div class="row welcome text-center">
 		<div class="col-12">
-			<h1 class="display-4">Meet The Team</h1>
+			<h1 class="display-4">Meet The ./tech_team</h1>
 			<hr>
 		</div>
 	</div>
@@ -61,11 +76,11 @@
 <div class="flip-card">
   <div class="flip-card-inner">
     <div class="flip-card-front">
-      <img src="img/vishnu.jpeg" alt="Avatar" style="width:300px;height:300px;">
+      <img src="{% static 'about/img/vishnu.jpeg'%}" alt="Avatar" style="width:300px;height:300px;">
     </div>
     <div class="flip-card-back">
-      <h1>Vishnu</h1> 
-      <p class="lead">Information & Technology</p> 
+      <h1>Vishnu</h1>
+      <p class="lead">S5 Information & Technology</p>
       <p class="lead">Govt. Engineering college</p>
       <p class="lead">Sreekrishnapuram</p>
     </div>
@@ -79,11 +94,11 @@
 <div class="flip-card">
   <div class="flip-card-inner">
     <div class="flip-card-front">
-      <img src="img/aravind.jpeg" alt="Avatar" style="width:300px;height:300px;">
+      <img src="{% static 'about/img/aravind.jpeg'%}" alt="Avatar" style="width:300px;height:300px;">
     </div>
     <div class="flip-card-back">
-      <h1>Aravind</h1> 
-       <p class="lead">Electronics & Communication</p> 
+      <h1>Aravind</h1>
+       <p class="lead">S5 Electronics & Communication</p>
       <p class="lead">Govt. Engineering college</p>
       <p class="lead">Sreekrishnapuram</p>
     </div>
@@ -97,11 +112,11 @@
 <div class="flip-card">
   <div class="flip-card-inner">
     <div class="flip-card-front">
-      <img src="img/Abi.jpg" alt="Avatar" style="width:300px;height:300px;">
+      <img src="{% static 'about/img/Abi.jpg'%}" alt="Avatar" style="width:300px;height:300px;">
     </div>
     <div class="flip-card-back">
-      <h1>Abhijith A</h1> 
-      <p class="lead">Electronics & Communication</p> 
+      <h1>Abhijith A</h1>
+      <p class="lead">S5 Electronics & Communication</p>
       <p class="lead">Govt. Engineering college</p>
       <p class="lead">Sreekrishnapuram</p>
     </div>
@@ -126,36 +141,55 @@
 
 <div class="container-fluid padding">
 	<div class="row padding">
-		
+
 		<div class="col-lg-6">
 			<div class="left">
 			<div class="flip-card">
+	<div class="flip-card-inner">
+		<div class="flip-card-front">
+			<img src="{% static 'about/img/margs.jpeg'%}" alt="Avatar" style="width:300px;height:300px;">
+		</div>
+		<div class="flip-card-back">
+			<h1>Varsha Margrette</h1>
+			<p class="lead">S7 Information Technology</p>
+				<p class="lead">Govt. Engineering college</p>
+			<p class="lead">Sreekrishnapuram</p>
+		</div>
+	</div>
+	</div>
+	</div>
+	</div>
+
+		<div class="col-lg-6">
+			<div class="res">
+			<div class="flip-card">
   <div class="flip-card-inner">
     <div class="flip-card-front">
-      <img src="img/rejul.jpeg" alt="Avatar" style="width:300px;height:300px;">
+      <img src="{% static 'about/img/rejul.jpeg'%}" alt="Avatar" style="width:300px;height:300px;">
     </div>
     <div class="flip-card-back">
-      <h1>Rejul</h1> 
-      <p class="lead">Computer Science & Engineering</p> 
+      <h1>Rejul S</h1>
+      <p class="lead">S5 Computer Science & Engineering</p>
         <p class="lead">Govt. Engineering college</p>
       <p class="lead">Sreekrishnapuram</p>
     </div>
   </div>
 </div>
-</div>
-</div>
+</div></div>
 
-		
+
+
+
 		<div class="col-lg-6">
 			<div class="right">
 		<div class="flip-card">
   <div class="flip-card-inner">
     <div class="flip-card-front">
-      <img src="img/Ajay.jpeg" alt="Avatar" style="width:300px;height:300px;">
+      <img src="{% static 'about/img/Ajay.jpeg'%}" alt="Avatar" style="width:300px;height:300px;">
     </div>
     <div class="flip-card-back">
-      <h1>Ajay Dev</h1> 
-      <p class="lead">Computer Science & Engineering</p> 
+      <h1>Ajay Dev</h1>
+      <p class="lead">S5 Computer Science & Engineering</p>
         <p class="lead">Govt. Engineering college</p>
       <p class="lead">Sreekrishnapuram</p>
     </div>
