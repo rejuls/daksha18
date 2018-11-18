@@ -30,7 +30,8 @@ class Registration(models.Model):
 	('poem_arab', 'POEM ARABIC'),
 	('poem_sanskrit', 'POEM SANSKRIT'),
 	('lightmusic','LIGHT MUSIC'),
-	('classic_music','CLASSICAL MUSIC'))
+	('classic_music','CLASSICAL MUSIC'),
+	('kuchipudi', 'KUCHIPUDI'))
 
 	#Registation Table
 	full_name = models.CharField(max_length=50)
