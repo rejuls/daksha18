@@ -50,7 +50,7 @@ class Registration(models.Model):
 
 	#Registation Table
 	full_name = models.CharField(max_length=50)
-	year = models.CharField(default ='2',max_length=2, choices=YEAR_CHOICES)
+	year = models.CharField(default ='2',max_length=10, choices=YEAR_CHOICES)
 	department = models.CharField(max_length=50, choices=DEPARTMENT_CHOICES, default='Computer Science')
 	phone = models.CharField(max_length=12, null=True)
 	events = MultiSelectField(choices=EVENTS_CHOICES, max_choices=4, default='KADHAPRASANGAM')
