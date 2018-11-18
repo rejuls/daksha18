@@ -37,7 +37,8 @@ class Registration(models.Model):
 		('1', '1'),
 		('2', '2'),
 		('3', '3'),
-		('4', '4'))
+		('4', '4'),
+		('Mtech', 'M.Tech'))
 
 	DEPARTMENT_CHOICES = (
 		('CSE', 'Computer Science'),
