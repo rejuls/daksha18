@@ -33,11 +33,25 @@ class Registration(models.Model):
 	('classic_music','CLASSICAL MUSIC'),
 	('kuchipudi', 'KUCHIPUDI'))
 
+	YEAR_CHOICES = (
+		('1', '1'),
+		('2', '2'),
+		('3', '3'),
+		('4', '4'))
+
+	DEPARTMENT_CHOICES = (
+		('CSE', 'Computer Science'),
+		('IT', 'Information Technology'),
+		('ECE', 'Electronics and Communication'),
+		('EEE', 'Electrical and Electronics'),
+		('ME', 'Mechanical Engineering'))
+
+
 	#Registation Table
 	full_name = models.CharField(max_length=50)
-	year = models.DecimalField(default =0,max_digits=1,decimal_places=0)
-	department = models.CharField(max_length=50,null=True)
-	phone = models.CharField(max_length=12,null=True)
+	year = models.CharField(default ='2',max_length=2, choices=YEAR_CHOICES)
+	department = models.CharField(max_length=50, choices=DEPARTMENT_CHOICES, default='Computer Science')
+	phone = models.CharField(max_length=12, null=True)
 	events = MultiSelectField(choices=EVENTS_CHOICES, max_choices=4, default='KADHAPRASANGAM')
 	
 	def __str__(self):
