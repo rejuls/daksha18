@@ -35,12 +35,12 @@ def score_view(request):
 
 
 #new
-def result_view(request, name):
+def result_view(request):
 
 	queryset = Result.objects.all()
-	context = {"result" : queryset }
-
-	return render(request,"result_view.html",context)
+	dict = {"result" : queryset }
+	#print(type(dict['result'].event_name))
+	return render(request,"results.html",dict)
 
 def export_users_csv(request):
     response = HttpResponse(content_type='text/csv')

@@ -54,7 +54,7 @@ class Registration(models.Model):
 	department = models.CharField(max_length=50, choices=DEPARTMENT_CHOICES, default='Computer Science')
 	phone = models.CharField(max_length=12, null=True)
 	events = MultiSelectField(choices=EVENTS_CHOICES, max_choices=4, default='KADHAPRASANGAM')
-	
+
 	def __str__(self):
 		return self.full_name
 
@@ -65,9 +65,9 @@ class Result(models.Model):
 
 	#Result Table
 	event_name = models.CharField(max_length=50,default=None)
-	first_prize = models.CharField(max_length=50,default=None)
-	second_prize = models.CharField(max_length=50,default=None)
-	third_prize = models.CharField(max_length=50,default=None)
+	first_prize = models.TextField(default=None)
+	second_prize = models.TextField(default=None)
+	third_prize = models.TextField(default=None)
 
 	def __str__(self):
 		return self.event_name

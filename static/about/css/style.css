@@ -1,7 +1,7 @@
 html,body {
-  background: #FC5C7D;  /* fallback for old browsers */
+  background: linear-gradient(45deg, #4158d0, #c850c0);  /* fallback for old browsers */
 background: -webkit-linear-gradient(to right, #6A82FB, #FC5C7D);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #6A82FB, #FC5C7D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+color: white;
  font-family: 'Rajdhani', sans-serif;
 }
 h1 .display-4{
@@ -57,12 +57,66 @@ footer .footer-bottom {
   background: #333;
   padding: 1rem;
 }
-
+.img-circle
+{
+  width: 175px;
+  height: 175px;
+  border-radius: 50%;
+  margin:auto;
+}
+.info_c
+{
+  display: flex;
+  width:95%;
+  height: 200px;
+background: #e6e6e6;
+box-shadow: 2px 2px 13px #aaa;
+margin:auto;
+margin-bottom: 20px;
+border-radius: 21px;
+color: #292323;
+}
+.info
+{
+  width:70%;
+  height: 100%;
+  display: block;
+  text-align: center;
+}
+.img_u
+{
+  width:30%;
+  height:100%;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
 @media only screen and (max-width: 576px) {
  .meet {
   font-size: 250%;
  }
-  div .res {
+
+.info_c{
+  display: block;
+  height: 350px;
+}
+.info
+{
+  width:100%;
+  height:60%;
+}
+.img_u
+{
+  width:100%;
+  height:40%;
+}
+.img-circle
+{
+  width:125px;
+  height: 125px;
+}
+
+ /* div .res {
      padding-left: 10%;
   padding-bottom: 5%;
 
@@ -73,6 +127,6 @@ footer .footer-bottom {
 }
 div .right {
   padding-left: 10%;
-}
+}*/
 
 }
