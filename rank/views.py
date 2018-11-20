@@ -54,3 +54,5 @@ def export_users_csv(request):
         writer.writerow(entry)
 
     return response
+def reg_closed(request):
+	return render(request, 'rank/register_success.html')
