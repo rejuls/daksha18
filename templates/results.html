@@ -85,23 +85,20 @@
 
 
                       <h1 class="display-5" id="event_list">Score Board</h1>
-                      <table>
+                      <table id="sc_br">
                         <thead>
                           <tr class="table100-head">
-                            <th class="column1">First Year</th>
-                            <th class="column2">Second Year</th>
-                            <th class="column2">Third Year</th>
-                            <th class="column2">Fourth Year</th>
+                            <th class="column1">Year</th>
+                            <th class="column2">Point</th>
 
                         </thead>
                         <tbody>
+                          {% for p in point %}
                           <tr>
-                            <td class="column1">test</td>
-                            <td class="column2">test</td>
-                            <td class="column3">test</td>
-                            <td class="column4">test</td>
+                            <td class="column1">{{p.year}}</td>
+                            <td class="column2">{{p.points}}</td>
                           </tr>
-
+                          {% endfor %}
 
                         </tbody>
                         </table>
@@ -185,7 +182,27 @@
             <!--===============================================================================================-->
             	<script src="{% static 'event/vendor/select2/select2.min.js'%}"></script>
             <!--===============================================================================================-->
+            <<script>
+              function updater()
+              {
 
+                //alert("ok");
+                $.ajax({
+                        url: '/results/',
+                        type: 'GET',
+                        success:function(){
+                          console.log("ok");
+                        }
+                        });
+                setTimeout(updater,10000);
+              }
+              $(document).ready(function() {
+                //alert("ok");
+                updater()
+
+              });
+
+            </script>
 
             </body>
             </html>

@@ -286,6 +286,13 @@ tbody tr:hover {
   table tbody tr td:nth-child(4):before {
     content: "Third";
   }
+  #sc_br tbody tr td:nth-child(1):before {
+    content:'Year';
+  }
+  #sc_br tbody tr td:nth-child(2):before {
+    content:'Points';
+  }
+  }
   /*table tbody tr td:nth-child(4):before {
     content: "Price";
   }
