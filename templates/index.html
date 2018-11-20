@@ -32,7 +32,7 @@
 <body>
 
   <!-- Showcase & Nav -->
-        <header>
+  <header>
                 <nav class="navbar navbar-expand-md navbar navbar-dark bg-dark navbar sticky-top">
                 <div class="container-fluid">
               <span class="navbar-brand mb-0 h1" id="heading">RESOLUTE COLLEGE UNION</span>
@@ -45,7 +45,9 @@
                   <li class="nav-item active">
               <!--  <a class="nav-link" href="#">Results</a>
                 </li>-->
-                
+                <li class="nav-item">
+                <a class="nav-link" href="{% url "rank:index" %}">Home</a>
+              </li>
                 <li class="nav-item">
                 <a class="nav-link" href="{% url "rank:team" %}">Team</a>
                 </li>
@@ -55,11 +57,15 @@
                 <li class="nav-item">
                 <a class="nav-link" href="{% url "rank:event" %}">Event Lists</a>
                 </li>
+                <li class="nav-item">
+                <a class="nav-link" href="{% url "rank:result" %}">Results</a>
+                </li>
             </ul>
                 </div>
               </div>
             </nav>
             </header>
+
  <div id="showcase">
 
     <div class="section-main container">

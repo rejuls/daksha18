@@ -12,29 +12,39 @@
 </head>
 <body>
 	<header>
-		<nav class="navbar navbar-expand-md navbar navbar-dark bg-dark navbar sticky-top">
-		<div class="container-fluid">
-  <span class="navbar-brand mb-0 h1" id="heading">RESOLUTE COLLEGE UNION</span>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarResponsive">
-    <ul class="navbar-nav ml-auto">
-      	<li class="nav-item active">
-      <a class="nav-link" href="#">Home</a>
-  		</li>
-      <li class="nav-item">
-      <a class="nav-link" href="#">Event lists</a>
-  		</li>
-      <li class="nav-item">
-      <a class="nav-link" href="#registration">Registration</a>
-  		</li>
-   		
-  </ul>
-  	</div>
-  </div>
-</nav>
-</header>
+								<nav class="navbar navbar-expand-md navbar navbar-dark bg-dark navbar sticky-top">
+								<div class="container-fluid">
+							<span class="navbar-brand mb-0 h1" id="heading">RESOLUTE COLLEGE UNION</span>
+							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+								<span class="navbar-toggler-icon"></span>
+							</button>
+							<div class="collapse navbar-collapse" id="navbarResponsive">
+
+							<ul class="navbar-nav ml-auto">
+									<li class="nav-item active">
+							<!--  <a class="nav-link" href="#">Results</a>
+								</li>-->
+								<li class="nav-item">
+								<a class="nav-link" href="{% url "rank:index" %}">Home</a>
+							</li>
+								<li class="nav-item">
+								<a class="nav-link" href="{% url "rank:team" %}">Team</a>
+								</li>
+								<li class="nav-item">
+								<a class="nav-link" href="{% url "rank:register_page" %}">Registration</a>
+							</li>
+								<li class="nav-item">
+								<a class="nav-link" href="{% url "rank:event" %}">Event Lists</a>
+								</li>
+								<li class="nav-item">
+								<a class="nav-link" href="{% url "rank:result" %}">Results</a>
+								</li>
+						</ul>
+								</div>
+							</div>
+						</nav>
+						</header>
+
 <!-- meet the team -->
 <div class="container-fluid padding">
 	<div class="row welcome text-center">
@@ -64,8 +74,8 @@
       <img src="img/vishnu.jpeg" alt="Avatar" style="width:300px;height:300px;">
     </div>
     <div class="flip-card-back">
-      <h1>Vishnu</h1> 
-      <p class="lead">Information & Technology</p> 
+      <h1>Vishnu</h1>
+      <p class="lead">Information & Technology</p>
       <p class="lead">Govt. Engineering college</p>
       <p class="lead">Sreekrishnapuram</p>
     </div>
@@ -82,8 +92,8 @@
       <img src="img/aravind.jpeg" alt="Avatar" style="width:300px;height:300px;">
     </div>
     <div class="flip-card-back">
-      <h1>Aravind</h1> 
-       <p class="lead">Electronics & Communication</p> 
+      <h1>Aravind</h1>
+       <p class="lead">Electronics & Communication</p>
       <p class="lead">Govt. Engineering college</p>
       <p class="lead">Sreekrishnapuram</p>
     </div>
@@ -100,8 +110,8 @@
       <img src="img/Abi.jpg" alt="Avatar" style="width:300px;height:300px;">
     </div>
     <div class="flip-card-back">
-      <h1>Abhijith A</h1> 
-      <p class="lead">Electronics & Communication</p> 
+      <h1>Abhijith A</h1>
+      <p class="lead">Electronics & Communication</p>
       <p class="lead">Govt. Engineering college</p>
       <p class="lead">Sreekrishnapuram</p>
     </div>
@@ -126,7 +136,7 @@
 
 <div class="container-fluid padding">
 	<div class="row padding">
-		
+
 		<div class="col-lg-6">
 			<div class="left">
 			<div class="flip-card">
@@ -135,8 +145,8 @@
       <img src="img/rejul.jpeg" alt="Avatar" style="width:300px;height:300px;">
     </div>
     <div class="flip-card-back">
-      <h1>Rejul</h1> 
-      <p class="lead">Computer Science & Engineering</p> 
+      <h1>Rejul</h1>
+      <p class="lead">Computer Science & Engineering</p>
         <p class="lead">Govt. Engineering college</p>
       <p class="lead">Sreekrishnapuram</p>
     </div>
@@ -145,7 +155,7 @@
 </div>
 </div>
 
-		
+
 		<div class="col-lg-6">
 			<div class="right">
 		<div class="flip-card">
@@ -154,8 +164,8 @@
       <img src="img/Ajay.jpeg" alt="Avatar" style="width:300px;height:300px;">
     </div>
     <div class="flip-card-back">
-      <h1>Ajay Dev</h1> 
-      <p class="lead">Computer Science & Engineering</p> 
+      <h1>Ajay Dev</h1>
+      <p class="lead">Computer Science & Engineering</p>
         <p class="lead">Govt. Engineering college</p>
       <p class="lead">Sreekrishnapuram</p>
     </div>
