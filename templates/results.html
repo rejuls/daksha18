@@ -42,7 +42,7 @@
 
 </head>
 <body>
-	<header>
+  <header>
                 <nav class="navbar navbar-expand-md navbar navbar-dark bg-dark navbar sticky-top">
                 <div class="container-fluid">
               <span class="navbar-brand mb-0 h1" id="heading">RESOLUTE COLLEGE UNION</span>
@@ -61,11 +61,14 @@
 								<li class="nav-item">
 								<a class="nav-link" href="{% url "rank:team" %}">Team</a>
 								</li>
-								<li class="nav-item">
+							<!--	<li class="nav-item">
 								<a class="nav-link" href="{% url "rank:register_page" %}">Registration</a>
-							</li>
+							</li> -->
 								<li class="nav-item">
 								<a class="nav-link" href="{% url "rank:event" %}">Event Lists</a>
+								</li>
+								<li class="nav-item">
+								<a class="nav-link" href="{% url "rank:result" %}">Results</a>
 								</li>
 						</ul>
                 </div>
@@ -85,23 +88,20 @@
 
 
                       <h1 class="display-5" id="event_list">Score Board</h1>
-                      <table>
+                      <table id="sc_br">
                         <thead>
                           <tr class="table100-head">
-                            <th class="column1">First Year</th>
-                            <th class="column2">Second Year</th>
-                            <th class="column2">Third Year</th>
-                            <th class="column2">Fourth Year</th>
+                            <th class="column1">Year</th>
+                            <th class="column2">Point</th>
 
                         </thead>
                         <tbody>
+                          {% for p in point %}
                           <tr>
-                            <td class="column1">test</td>
-                            <td class="column2">test</td>
-                            <td class="column3">test</td>
-                            <td class="column4">test</td>
+                            <td class="column1">{{p.year}}</td>
+                            <td class="column2">{{p.points}}</td>
                           </tr>
-
+                          {% endfor %}
 
                         </tbody>
                         </table>
