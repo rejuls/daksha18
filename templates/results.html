@@ -182,27 +182,7 @@
             <!--===============================================================================================-->
             	<script src="{% static 'event/vendor/select2/select2.min.js'%}"></script>
             <!--===============================================================================================-->
-            <<script>
-              function updater()
-              {
-
-                //alert("ok");
-                $.ajax({
-                        url: '/results/',
-                        type: 'GET',
-                        success:function(){
-                          console.log("ok");
-                        }
-                        });
-                setTimeout(updater,10000);
-              }
-              $(document).ready(function() {
-                //alert("ok");
-                updater()
-
-              });
-
-            </script>
+          
 
             </body>
             </html>
