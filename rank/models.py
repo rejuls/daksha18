@@ -82,4 +82,7 @@ class Point(models.Model):
 	points =  models.DecimalField(default =0,max_digits=3,decimal_places=0)
 
 	def __str__(self):
+		return self.points
+
+	def __str__(self):
 		return self.year

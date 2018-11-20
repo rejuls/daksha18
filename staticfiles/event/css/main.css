@@ -213,7 +213,7 @@ tbody tr:hover {
 }
 
 .column1 {
-  width: 260px;
+  width: 60px;
   padding-left: 40px;
 }
 
@@ -278,15 +278,22 @@ tbody tr:hover {
     content: "Event";
   }
   table tbody tr td:nth-child(2):before {
-    content: "Time";
+    content: "First";
   }
   table tbody tr td:nth-child(3):before {
-    content: "Number Of Participants";
-  }
-  /*table tbody tr td:nth-child(3):before {
-    content: "Name";
-  }
+    content: "Second";
+  }F
   table tbody tr td:nth-child(4):before {
+    content: "Third";
+  }
+  #sc_br tbody tr td:nth-child(1):before {
+    content:'Year';
+  }
+  #sc_br tbody tr td:nth-child(2):before {
+    content:'Points';
+  }
+  }
+  /*table tbody tr td:nth-child(4):before {
     content: "Price";
   }
   table tbody tr td:nth-child(5):before {
