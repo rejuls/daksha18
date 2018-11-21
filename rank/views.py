@@ -36,9 +36,9 @@ def score_view(request):
 
 #new
 def result_view(request):
-
+	queryset2=Point.objects.all()
 	queryset = Result.objects.all()
-	dict = {"result" : queryset }
+	dict = {"result" : queryset ,"point":queryset2}
 	#print(type(dict['result'].event_name))
 	return render(request,"results.html",dict)
 

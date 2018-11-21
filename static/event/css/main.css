@@ -173,7 +173,7 @@ table tbody tr:last-child {
   border: 0;
 }
 table td, table th {
-  text-align: left;
+  text-align: center;
 }
 table td.l, table th.l {
   text-align: right;
@@ -282,7 +282,7 @@ tbody tr:hover {
   }
   table tbody tr td:nth-child(3):before {
     content: "Second";
-  }F
+  }
   table tbody tr td:nth-child(4):before {
     content: "Third";
   }
@@ -302,7 +302,7 @@ tbody tr:hover {
   table tbody tr td:nth-child(6):before {
     content: "Total";
   }
-*/
+
   .column4,
   .column5,
   .column6 {
@@ -316,7 +316,7 @@ tbody tr:hover {
   .column2,
   .column3 {
     width: 100%;
-  }
+  }*/
 
   tbody tr {
     font-size: 14px;
