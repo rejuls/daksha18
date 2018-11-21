@@ -68,7 +68,7 @@ footer .footer-bottom {
 {
   display: flex;
   width:95%;
-  height: 200px;
+  height: 225px;
 background: #e6e6e6;
 box-shadow: 2px 2px 13px #aaa;
 margin:auto;
@@ -98,7 +98,7 @@ color: #292323;
 
 .info_c{
   display: block;
-  height: 350px;
+  height: 390px;
 }
 .info
 {
