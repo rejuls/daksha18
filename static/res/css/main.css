@@ -278,10 +278,10 @@ tbody tr:hover {
     content: "Event";
   }
   table tbody tr td:nth-child(2):before {
-    content: "Time";
+    content: "First";
   }
   table tbody tr td:nth-child(3):before {
-    content: "Maximum Participants";
+    content: "Second";
   }
   table tbody tr td:nth-child(4):before {
     content: "Third";
