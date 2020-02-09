@@ -1,4 +1,10 @@
+span#heading{
+  margin: auto;
+}
 
+.Dheading{
+  font-size: 4rem; 
+}
 
 /* CSS Variables */
 :root {

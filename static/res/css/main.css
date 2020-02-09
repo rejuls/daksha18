@@ -102,12 +102,17 @@ iframe {
 
 /*//////////////////////////////////////////////////////////////////
 [ Table ]*/
-.event{
+/*.event{
   background: #c850c0;
-  background: -webkit-linear-gradient(45deg, #4158d0, #c850c0);
-  background: -o-linear-gradient(45deg, #4158d0, #c850c0);
-  background: -moz-linear-gradient(45deg, #4158d0, #c850c0);
-  background: linear-gradient(45deg, #4158d0, #c850c0);
+  background: -webkit-linear-gradient(45deg, #2C2627, #BC2C3D);
+  background: -o-linear-gradient(45deg, #2C2627, #BC2C3D);
+  background: -moz-linear-gradient(45deg, #2C2627, #BC2C3D);
+  background: linear-gradient(45deg, #2C2627, #BC2C3D);
+  }
+}*/
+
+.event{
+  background:#BC2C3D;
 }
 #event_list{
   text-align: center;
@@ -201,7 +206,7 @@ tbody tr:nth-child(even) {
 tbody tr {
   font-family: OpenSans-Regular;
   font-size: 15px;
-  color: #808080;
+  color: #2C2627;
   line-height: 1.2;
   font-weight: unset;
 }
@@ -218,7 +223,6 @@ tbody tr:hover {
 }
 
 .column2 {
-  width: 160px;
 }
 
 /*.column3 {
@@ -257,7 +261,7 @@ tbody tr:hover {
     padding: 37px 0;
   }
   table tbody tr td {
-    padding-left: 40% !important;
+    padding-left: 10% !important;
     margin-bottom: 24px;
   }
   table tbody tr td:last-child {
@@ -266,12 +270,12 @@ tbody tr:hover {
   table tbody tr td:before {
     font-family: OpenSans-Regular;
     font-size: 14px;
-    color: #999999;
+    color: #2C2627;
     line-height: 1.2;
     font-weight: unset;
     position: absolute;
     width: 40%;
-    left: 30px;
+    left: 10px;
     top: 0;
   }
   table tbody tr td:nth-child(1):before {
