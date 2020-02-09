@@ -3,7 +3,7 @@ from multiselectfield import MultiSelectField
 # Create your models here.
 
 
-class Registration(models.Model):
+'''class Registration(models.Model):
 
 	EVENTS_CHOICES = (
 	('kadaprasangham', 'KADHAPRASANGAM'),
@@ -59,9 +59,9 @@ class Registration(models.Model):
 		return self.full_name
 
 	def __unicode__(self):
-		return self.full_name
+		return self.full_name'''
 
-class Result(models.Model):
+class OnstageResult(models.Model):
 
 	#Result Table
 	event_name = models.CharField(max_length=50,default=None)
@@ -74,6 +74,21 @@ class Result(models.Model):
 
 	def __unicode__(self):
 		return self.event_name
+
+class OffstageResult(models.Model):
+
+	#Result Table
+	event_name = models.CharField(max_length=50,default=None)
+	first_prize = models.TextField(default=None)
+	second_prize = models.TextField(default=None)
+	third_prize = models.TextField(default=None)
+
+	def __str__(self):
+		return self.event_name
+
+	def __unicode__(self):
+		return self.event_name
+
 
 class Point(models.Model):
 

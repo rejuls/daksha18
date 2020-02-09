@@ -11,8 +11,18 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 import os
 import environ
+import sentry_sdk
+from sentry_sdk.integrations.django import DjangoIntegration
 
 
+sentry_sdk.init(
+    dsn="https://51958a94e5144db8b3ae32e1418fff75@sentry.io/2379834",
+    integrations=[DjangoIntegration()],
+
+    # If you wish to associate users to errors (assuming you are using
+    # django.contrib.auth) you may enable sending PII data.
+    send_default_pii=True
+)
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 root = environ.Path(__file__) - 2 # three folder back (/a/b/c/ - 3 = /)
@@ -129,7 +139,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
+
+
 
 
 STATIC_URL = '/static/'

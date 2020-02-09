@@ -1,12 +1,11 @@
 from django.shortcuts import render
-from . models import Point,Result, Registration
-from . forms import RegistrationForm
+from . models import Point,OnstageResult, OffstageResult
 import csv
 from django.http import HttpResponse
 
 # Create your views here
 
-def index(request):
+'''def index(request):
 	return render(request, 'index.html')
 
 def event(request):
@@ -31,18 +30,19 @@ def score_view(request):
 	queryset = Point.objects.all()
 	context = {"score" : queryset }
 
-	return render(request,"score.html",context)
+	return render(request,"score.html",context)'''
 
 
 #new
 def result_view(request):
+	queryset3 = OffstageResult.objects.all()
 	queryset2=Point.objects.all()
-	queryset = Result.objects.all()
-	dict = {"result" : queryset ,"point":queryset2}
+	queryset = OnstageResult.objects.all()
+	dict = {"onresult" : queryset, "offresult" : queryset3,"point":queryset2}
 	#print(type(dict['result'].event_name))
 	return render(request,"results.html",dict)
 
-def export_users_csv(request):
+'''def export_users_csv(request):
     response = HttpResponse(content_type='text/csv')
     response['Content-Disposition'] = 'attachment; filename="users.csv"'
 
@@ -55,4 +55,4 @@ def export_users_csv(request):
 
     return response
 def reg_closed(request):
-	return render(request, 'rank/register_success.html')
+	return render(request, 'rank/register_success.html')'''
