@@ -169,7 +169,7 @@ table td, table th {
 }
 table thead tr {
   height: 60px;
-  background: #36304a;
+  background: #2C2627;
 }
 table tbody tr {
   height: 50px;
@@ -258,7 +258,7 @@ tbody tr:hover {
   }
   table tbody tr {
     height: auto;
-    padding: 37px 0;
+    padding: 25px 0;
   }
   table tbody tr td {
     padding-left: 10% !important;

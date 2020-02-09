@@ -3,7 +3,17 @@ span#heading{
 }
 
 .Dheading{
-  font-size: 4rem; 
+  font-size: 4rem;
+  text-align: center;
+}
+
+p#sc_br_r{
+  font-size: 1.5rem;
+}
+
+.bg-dark{
+  background-color: #2C2627!important;
+
 }
 
 /* CSS Variables */
