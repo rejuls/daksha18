@@ -9,5 +9,5 @@ urlpatterns = [
 	#path('export/csv/', views.export_users_csv, name='export_users_csv'),
 	#path('team/',views.team, name='team'),
 	path('',views.result_view,name='result'),
-
+	path('export/csv/', views.export_result_csv, name='export_result_csv'),
 ]

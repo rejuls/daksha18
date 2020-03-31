@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from . models import Point,OnstageResult, OffstageResult
+from . models import Point, OnstageResult, OffstageResult
 import csv
 from django.http import HttpResponse
 
@@ -33,14 +33,15 @@ def score_view(request):
 	return render(request,"score.html",context)'''
 
 
-#new
+# new
 def result_view(request):
-	queryset3 = OffstageResult.objects.all()
-	queryset2=Point.objects.all()
-	queryset = OnstageResult.objects.all()
-	dict = {"onresult" : queryset, "offresult" : queryset3,"point":queryset2}
-	#print(type(dict['result'].event_name))
-	return render(request,"results.html",dict)
+    queryset3 = OffstageResult.objects.all()
+    queryset2 = Point.objects.all()
+    queryset = OnstageResult.objects.all()
+    dict = {"onresult": queryset, "offresult": queryset3, "point": queryset2}
+    # print(type(dict['result'].event_name))
+    return render(request, "results.html", dict)
+
 
 '''def export_users_csv(request):
     response = HttpResponse(content_type='text/csv')
@@ -56,3 +57,25 @@ def result_view(request):
     return response
 def reg_closed(request):
 	return render(request, 'rank/register_success.html')'''
+
+
+def export_result_csv(request):
+    response = HttpResponse(content_type='text/csv')
+    response['Content-Disposition'] = 'attachment; filename="DakshaSiteResults.csv"'
+
+    writer = csv.writer(response)
+    writer.writerow(['Onstage Event', 'First', 'Second', 'Third'])
+
+    lists = OnstageResult.objects.all().values_list(
+        'event_name', 'first_prize', 'second_prize', 'third_prize')
+    for entry in lists:
+        writer.writerow(entry)
+
+    writer.writerow([''])
+    writer.writerow(['Offstage Event', 'First', 'Second', 'Third'])
+    lists = OffstageResult.objects.all().values_list(
+        'event_name', 'first_prize', 'second_prize', 'third_prize')
+    for entry in lists:
+        writer.writerow(entry)
+
+    return response
